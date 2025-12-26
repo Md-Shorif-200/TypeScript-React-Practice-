@@ -9,7 +9,7 @@ type privateRouteType = {
 
 export default function Private({isLoggedIn,Component}:privateRouteType) {
       if(isLoggedIn){
-        <Component name="shorif" />
+          return <Component name="shorif" />;
       } 
   return <LogIn/>
 }
