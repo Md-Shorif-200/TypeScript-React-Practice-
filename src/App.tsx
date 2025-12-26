@@ -1,5 +1,6 @@
 
 import './App.css'
+import UserProvider from './Components/Context/UserProvider'
 import Counter from './Components/Counter'
 import Heading from './Components/Heading'
 import User from './Components/User'
@@ -7,20 +8,21 @@ import User from './Components/User'
 
 function App() {
 
-  const user1 = {
-    name :  "shorif Uddin rifat",
-    //  age : 23 ,
-     lang :  ["bangla","english"]
-  }
+
 
   return (
     <>
-      <User user={user1} />
+      <User />
        <Heading>
       hellow shorif 
        </Heading>
 
         <Counter/>
+
+
+          <UserProvider>
+       
+          </UserProvider>
     </>
   )
 }

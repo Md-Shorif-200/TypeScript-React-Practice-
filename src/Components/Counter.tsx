@@ -6,14 +6,18 @@ type counterStateType = {
      count : number
 }
 
-type counterActionType
+type counterActionType  = {
+  //  type : string;
+   type : 'increment' | 'decrement' | 'reset';
+   payload : number;
+}
 
 
 const initialState = {
   count: 0,
 };
 
-const reducer = (state:counterStateType, action) => {
+const reducer = (state:counterStateType, action:counterActionType) => {
   switch (action.type) {
     case "increment":
       return { count: state.count + action.payload };
@@ -33,10 +37,11 @@ export default function Counter() {
   const [state, dispatch] = useReducer(reducer, initialState);
   return (
     <div>
-      <button>Incriment(+)</button>
-      <button>Decrement(-)</button>
-      <button>Reset</button>
-      <h1> count : 0 </h1>
+      <button onClick={() => dispatch({type : "increment" , payload : 1 })}>Incriment(+)</button>
+      <button onClick={() => dispatch({type : "decrement" , payload : 1 })}>Decrement(-)</button>
+      <button onClick={() => dispatch({type : "reset" , payload : 0 })}>Reset</button>
+
+      <h1> count : {state.count} </h1>
     </div>
   );
 }
