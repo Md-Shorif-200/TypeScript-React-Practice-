@@ -6,6 +6,7 @@ import Counter from './Components/Counter'
 import List from './Components/Generics/List'
 import Heading from './Components/Heading'
 import RandomNumber from './Components/Restriction/RandomNumber'
+import ToastPosition from './Components/TemplateLiterials/ToastPosition'
 import User from './Components/User'
 
 
@@ -45,6 +46,7 @@ function App() {
 
               <RandomNumber value={10} isPositive />
               <RandomNumber value={-30} isNegetive />
+               <ToastPosition position='top' />
     </>
   )
 }
