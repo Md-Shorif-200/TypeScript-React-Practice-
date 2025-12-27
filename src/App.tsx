@@ -5,6 +5,7 @@ import UserProvider from './Components/Context/UserProvider'
 import Counter from './Components/Counter'
 import List from './Components/Generics/List'
 import Heading from './Components/Heading'
+import RandomNumber from './Components/Restriction/RandomNumber'
 import User from './Components/User'
 
 
@@ -26,7 +27,7 @@ function App() {
        <Box/>
           </UserProvider>
 
-            <List items={['laptop',"smartphone","bluthoote"]}  onClick={(item) => console.log(item)} />
+            {/* <List items={['laptop',"smartphone","bluthoote"]}  onClick={(item) => console.log(item)} /> */}
             <List items={
               [
                   {
@@ -41,6 +42,8 @@ function App() {
                 },
               ]
             }  onClick={(item) => console.log(item)} />
+
+              <RandomNumber value={10} isPosetive IsNegetive isZero />
     </>
   )
 }
