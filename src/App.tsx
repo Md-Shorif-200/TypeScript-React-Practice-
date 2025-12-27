@@ -43,7 +43,8 @@ function App() {
               ]
             }  onClick={(item) => console.log(item)} />
 
-              <RandomNumber value={10} isPosetive IsNegetive isZero />
+              <RandomNumber value={10} isPositive />
+              <RandomNumber value={-30} isNegetive />
     </>
   )
 }
